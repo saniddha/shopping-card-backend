@@ -1,0 +1,58 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<configuration>
+	
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[%d{yyyy-MM-dd'T'HH:mm:ss'Z'}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="INFO_F" class="ch.qos.logback.core.FileAppender">
+		<File>application.log</File>
+		<encoder>
+			<pattern>[%d{yyyy-MM-dd'T'HH:mm:ss'Z'}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+<!--			<pattern>[%d{yyyy-MM-dd'T'HH:mm:ss'Z'}] [%C] [%t] [%L] [%-5p] %m%n</pattern>-->
+		</encoder>
+	</appender>
+
+	<appender name="ERROR_F" class="ch.qos.logback.core.FileAppender">
+		<File>application2.log</File>
+		<encoder>
+			<pattern>[%d{yyyy-MM-dd'T'HH:mm:ss'Z'}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="DEBUG_F" class="ch.qos.logback.core.FileAppender">
+		<File>application3.log</File>
+		<encoder>
+			<pattern>[%d{yyyy-MM-dd'T'HH:mm:ss'Z'}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="TRACE_F" class="ch.qos.logback.core.FileAppender">
+		<File>application4.log</File>
+		<encoder>
+			<pattern>[%d{yyyy-MM-dd'T'HH:mm:ss'Z'}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />-->
+		<appender-ref ref="INFO_F" />
+	</root>
+
+	<root level="ERROR">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="ERROR_F" />
+	</root>
+
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="DEBUG_F" />
+	</root>
+<!--	<root level="TRACE">-->
+<!--		<appender-ref ref="STDOUT" />-->
+<!--		<appender-ref ref="TRACE_F" />-->
+<!--	</root>-->
+</configuration>

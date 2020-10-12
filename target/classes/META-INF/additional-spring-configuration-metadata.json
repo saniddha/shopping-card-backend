@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "superservice.endpoint",
+      "type": "java.lang.String",
+      "description": "Endpoint of Infomedia Superservice."
+    },
+    {
+      "name": "google.apikey",
+      "type": "java.lang.String",
+      "description": "Google API Key."
+    }
+  ] }

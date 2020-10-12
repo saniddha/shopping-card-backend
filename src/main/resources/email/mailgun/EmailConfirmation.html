@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=700" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+    <title></title>
+
+
+    <style>
+        html,
+        body {
+            font-family: Helvetica;
+            height: 100%;
+            width: 100%;
+        }
+
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        hr {
+            border-bottom: 1px solid rgba(0, 20, 39, 0.12);
+            border-top: none;
+            margin: 25px 0;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: rgba(15, 16, 17, 0.87);
+        }
+
+        h2 {
+            color: rgba(15, 16, 17, 0.87);
+            font-size: 18px
+        }
+
+        h3 {
+            font-size: 16px;
+            color: rgba(15, 16, 17, 0.87);
+        }
+
+        a {
+            color: #18A2D5;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0 0 5px 0;
+            color: rgba(15, 16, 17, 0.87);
+            text-align: left;
+        }
+
+        .button {
+            border: 2px solid #18A2D5;
+            color: #18A2D5;
+            border-radius: 25px;
+            padding: 8px 15px 8px 45px;
+            background-color: #ffffff;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: bold;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .button img {
+            position: absolute;
+            left: 14px;
+            top: 5px;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        .service-repairs tr td {
+            padding: 10px 0;
+            border-top: 1px solid rgba(15, 16, 17, 0.06);
+            width: 75%;
+            color: rgba(15, 16, 17, 0.65);
+        }
+
+        .service-repairs tr:last-child td {
+            font-weight: bold;
+            color: rgba(15, 16, 17, 0.87);
+        }
+
+        .row-section1 {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body width="100%" style="margin: 0; padding: 0;  background-color: #CCCCCC; ">
+<div class="inner-body" style="width: 850px; margin: 30px auto; background-color: #ffffff; padding: 30px 0 30px 0;">
+    <div style="width: 100%; background-color: #ffffff;">
+
+        <!-- Email Body : BEGIN -->
+        <table role="presentation"
+               style="width: 680px; margin: 0 auto; padding: 24px 28px; border: 1px solid rgba(0, 20, 39, 0.12); border-radius: 8px;"
+               class="email-container">
+            <tr>
+                <td>
+                    <section style="margin-bottom: 20px;">
+                        <h1
+                                style="font-weight: bold; text-align: center; margin: 0 0 10px 0 ; line-height: 20px; counter-reset: rgba(15, 16, 17, 0.87)">
+                            Booking confirmation</h1>
+                        <p style="font-size: 14px; text-align: center; line-height: 20px; margin: 0;">Appointment
+                            no. <span style="font-weight: bold;">{{appointment_no}}</span></p>
+                    </section>
+                    <hr>
+                    <section style="position: relative; padding-left: 100px;">
+                            <span style="position: absolute; left: 22px;"><img
+                                    src="https://ifm-connect-dev.s3-ap-southeast-1.amazonaws.com/nissan-logo.svg"></span>
+                        <div style="text-align: left;">
+                            <h2 style="margin: 0 0 6px 0;">{{dealer_name}}</h2>
+                            <p style="color: rgba(15, 16, 17, 0.65);">{{dealer_address}}</p>
+                            <p style="color: rgba(15, 16, 17, 0.65);">Email: <a
+                                    href="mailto:{{dealer_email}}">{{dealer_email}}</a></p>
+                            <p style="color: rgba(15, 16, 17, 0.65);">Phone: {{dealer_contact}}</p>
+                        </div>
+                    </section>
+                    <hr>
+                    <table style="margin-bottom: 30px; width: 100%;">
+                        <tr>
+                            <td style="position: relative; padding-left: 35px;" valign="top">
+                                    <span style="position: absolute; left: 0; top: 0;"><img
+                                            src="https://ifm-connect-dev.s3-ap-southeast-1.amazonaws.com/calender-icon.svg"></span>
+                                <p style="color: rgba(15, 16, 17, 0.38); font-size: 14px; margin-bottom: 10px;">
+                                    Appointment date and time</p>
+                                <p>{{appointment_time}}</p>
+                                <p>on {{appointment_date}}</p>
+                                <a href="{{add_to_calendar}}" class="button" target="_blank"><img
+                                        src="https://ifm-connect-dev.s3-ap-southeast-1.amazonaws.com/calender-view-icon.svg" />Add
+                                    to Calendar</a>
+                            </td>
+                            <td style="position: relative; padding-left: 35px;" valign="top">
+                                    <span style="position: absolute; left: 0; top: 0;"><img
+                                            src="https://ifm-connect-dev.s3-ap-southeast-1.amazonaws.com/location-icon.svg"></span>
+                                <p style="color: rgba(15, 16, 17, 0.38); font-size: 14px; margin-bottom: 10px">
+                                    Dealer
+                                    address</p>
+                                <p>{{dealer_address}}</p>
+                                <a href="{{dealer_location}}" class="button" target="_blank"><img
+                                        src="https://ifm-connect-dev.s3-ap-southeast-1.amazonaws.com/map-icon.svg" />Get
+                                    direction</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <section
+                            style="background: rgba(2, 104, 177, 0.08); margin-bottom: 30px; padding: 10px 10px 10px 40px; position: relative; border-radius: 4px;">
+                            <span style="position: absolute; left: 10px; top: 10px;"><img
+                                    src="https://ifm-connect-dev.s3-ap-southeast-1.amazonaws.com/info-icon.svg" /></span>
+                        <h3 style="color: #0268B1; font-size: 14px; margin: 0 0 5px 0;">All times are in
+                            {{time_zone}}.</h3>
+                        <p style="color: #0268B1; font-size: 14px">{{notification}}</p>
+                    </section>
+                    <table style="margin-bottom: 25px; width: 100%;">
+                        <tr>
+                            <td valign="top">
+                                <p style="color: rgba(15, 16, 17, 0.38);">Your vehicle</p>
+                                <h3 style="margin: 0 0 5px 0">{{vehicle_model}}</h3>
+                                <!-- <p>{{vehicle_model}}</p> -->
+                            </td>
+                            <td valign="top">
+                                    <span style="margin-bottom: 15px;">
+                                        <p style="color: rgba(15, 16, 17, 0.38);">Transport option</p>
+                                        <h3 style="margin: 0 0 5px 0">{{transport_option}}</h3>
+                                    </span>
+                                <span>
+                                        <p style="color: rgba(15, 16, 17, 0.38);">Your advisor</p>
+                                        <h3 style="margin: 0 0 5px 0">{{advisor}}</h3>
+                                    </span>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <section style="margin-bottom: 20px;">
+                        <h2>Service and repairs</h2>
+                        <table class="service-repairs" style="width: 100%;">
+                            {{#each operations}}
+                            <tr>
+                                <td>{{ this.name }} </td>
+                                <td>{{ this.price }} </td>
+                            </tr>
+                            {{/each}}
+                            <tr>
+                                <td>Total</td>
+                                <td>{{total_price}}</td>
+                            </tr>
+                        </table>
+                    </section>
+                    {{#if booking_notes}}
+                    <section>
+                        <i style="display: block; margin-bottom: 10px; color: rgba(15, 16, 17, 0.87);">Notes</i>
+                        <p style="font-size: 14px; margin: 0;">{{booking_notes}}</p>
+                    </section>
+                    {{/if}}
+                    <hr>
+                    <section style="margin-bottom: 15px;">
+                        <h2 style="margin: 0 0 10px 0;">Cancellation</h2>
+                        <p style="margin: 0 0 12px 0;">For cancellation, please contact us or plase click the button
+                            below.</p>
+                        <a href="{{cancel_url}}" class="button" target="_blank" style="padding: 8px 15px;">Cancel
+                            appointment</a>
+                    </section>
+                    <section>
+                        <p
+                                style="color: rgba(15, 16, 17, 0.65); margin: 0; text-align: right; font-size: 12px; line-height: 16px;">
+                            *Aditional work may increase your total price.</p>
+                    </section>
+                </td>
+            </tr>
+        </table>
+        <!-- Email Body : END -->
+    </div>
+</div>
+</body>
+
+</html>
